@@ -1,0 +1,123 @@
+<script>
+
+  alert("toto");
+
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141694400-1"></script>
+<script>
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141694400-1');
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5JBXJX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" *ngIf="!is_admin">
+  <div class="container">
+    <a routerLink="/" class="navbar-brand" routerLinkActive="active">MovieStream V1.0</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/" routerLinkActive="active">ACCUEIL
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/all_Movies_Fr"  routerLinkActive="active">FILMS</a>
+        </li>
+        <li class="nav-item">
+              <a class="nav-link" routerLink="/movies_populaires" routerLinkActive="active">FILMS POPULAIRES</a>
+            </li>
+
+        <li class="nav-item">
+                  <a class="nav-link" routerLink="/movies_top_100" routerLinkActive="active">TOP 100 MOVIES</a>
+                </li>    
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/cartoons" routerLinkActive="active">DESSINS ANNIMEES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/search_movie_by_genre_annee" routerLinkActive="active">PAR GENRE/ANNEE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">NOUS CONTACTER</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" *ngIf="is_admin">
+    <div class="container">
+      <a routerLink="/" class="navbar-brand" routerLinkActive="active">MovieStream V1.0</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="/gestion-admin/home" routerLinkActive="active">ACCUEIL
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/gestion-admin/AllMoviesFr"  routerLinkActive="active">FILMS FR</a>
+          </li>           
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/gestion-admin/Cartoons" routerLinkActive="active">DESSINS ANNIMEES</a>
+          </li>                
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="container" >
+
+    <div class="row col-lg-8">
+
+   
+        <router-outlet></router-outlet>
+
+     </div>
+    <!-- <div class="row col-lg-4">
+
+   
+        <form class="form-horizontal" id="form_search_movie" name="form_search_movie" method="POST"  action="./search_movie">
+     
+               <h5 class="card-header">Rechercher un film</h5>
+               <div class="card-body">
+                 <div class="input-group">
+                   <input type="text" class="form-control" name="keywords"  id="keywords"  placeholder="Rechercher un titre...">
+                   <span class="input-group-btn">
+                    <button type="submit" class="btn btn-secondary" type="button">Go!</button>
+                   </span>
+                 </div>
+               </div>       
+       
+         </form>   
+
+     </div>-->
+
+
+</div>
+<footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; MovieStream 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+

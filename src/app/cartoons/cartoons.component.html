@@ -1,0 +1,69 @@
+
+
+  <div class="row col-lg-12">
+            
+
+  
+
+      <div class="col-lg-4 col-sm-6 portfolio-item" style="margin-top: 4%"  *ngFor="let movie of movies | paginate: { itemsPerPage: 9, currentPage: p }">
+           <div class="card h-100" >
+  
+            <h4 class="card-header">{{movie.titre_originale}}</h4>
+           
+             <div class="card-body">
+  
+              <!--   <a  [routerLink]="['displayFicheMovie', movie.key]"><img class="card-img-top" src="{{movie.poster_path}}" alt=""></a> -->
+  
+              <a  [routerLink]="['displayFicheMovie' , {section: 'Cartoons', key: movie.key} ]"><img class="card-img-top" src="{{movie.poster_path}}" alt=""></a>
+              
+              
+  
+               
+               <h4 class="card-title">
+                   <a href="#"> {{movie.genre}}</a>
+               </h4>
+  
+                <h4 class="card-title">
+                   <a href="#">({{movie.annee_release}})</a>
+               </h4>
+  
+               
+  
+               <a  [routerLink]="['displayFicheMovie' , {section: 'Cartoons', key: movie.key} ]"> <button type="button" class="btn btn-outline-primary">Lire la fiche</button></a> 
+              
+  
+            
+  
+  
+             </div>
+  
+           </div>
+  
+         </div>
+  
+          <div class="row" style="padding-top: 10%;padding-left: 30%">
+  
+              <style>
+                  .my-pagination /deep/ .ngx-pagination .current {
+                    background: red;
+  
+                    
+                  }
+                </style>
+  
+                     <pagination-controls class="my-pagination"  (pageChange)="p = $event"
+                                                                  previousLabel="Precedant"
+                                                                  nextLabel="Suivant">
+                    </pagination-controls>
+  
+           </div>
+  
+  
+         
+  
+  
+   </div>
+  
+   
+  
+  

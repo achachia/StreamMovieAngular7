@@ -1,0 +1,177 @@
+<div class="row col-lg-12">         
+
+  <h2 class="my-4">LES DERNIERS SORTIES DE CINEMA</h2>
+
+  <div class="col-lg-4 col-sm-6 portfolio-item" style="margin-top: 4%"  *ngFor="let movie of LastSortieMovies">
+       <div class="card h-100" >
+
+        <h4 class="card-header">{{movie.titre_originale}}</h4>
+       
+         <div class="card-body">
+
+          <!--   <a  [routerLink]="['displayFicheMovie', movie.key]"><img class="card-img-top" src="{{movie.poster_path}}" alt=""></a> -->
+
+          <a  [routerLink]="['displayFicheMovie' , {section: 'MoviesFr', key: movie.key} ]"><img class="card-img-top" src="{{movie.poster_path}}" alt=""></a>
+          
+          
+
+           
+           <h4 class="card-title">
+               <a href="#"> {{movie.genre}}</a>
+           </h4>
+
+            <h4 class="card-title">
+               <a href="#">({{movie.annee_release}})</a>
+           </h4>
+
+           
+
+           <a  [routerLink]="['displayFicheMovie' , {section: 'MoviesFr', key: movie.key} ]"> <button type="button" class="btn btn-outline-primary">Lire la fiche</button></a> 
+          
+
+        
+
+
+         </div>
+
+       </div>
+
+     </div> 
+     
+
+
+</div>
+
+<div class="row col-lg-12">         
+
+  <h2 class="my-4">LES DERNIERS DESSINS ANNIMEES</h2>
+
+  <div class="col-lg-4 col-sm-6 portfolio-item" style="margin-top: 4%"  *ngFor="let movie of LastSortieMoviesCartoon">
+       <div class="card h-100" >
+
+        <h4 class="card-header">{{movie.titre_originale}}</h4>
+       
+         <div class="card-body">
+
+          <!--   <a  [routerLink]="['displayFicheMovie', movie.key]"><img class="card-img-top" src="{{movie.poster_path}}" alt=""></a> -->
+
+          <a  [routerLink]="['displayFicheMovie' , {section: 'Cartoons', key: movie.key} ]"><img class="card-img-top" src="{{movie.poster_path}}" alt=""></a>
+          
+          
+
+           
+           <h4 class="card-title">
+               <a href="#"> {{movie.genre}}</a>
+           </h4>
+
+            <h4 class="card-title">
+               <a href="#">({{movie.annee_release}})</a>
+           </h4>
+
+           
+
+           <a  [routerLink]="['displayFicheMovie' , {section: 'Cartoons', key: movie.key} ]"> <button type="button" class="btn btn-outline-primary">Lire la fiche</button></a> 
+          
+
+        
+
+
+         </div>
+
+       </div>
+
+     </div> 
+     
+
+
+</div>
+
+<div class="row col-lg-12">         
+
+  <h2 class="my-4">LES DERNIERS FILMS POPULAIRES</h2>
+
+  <div class="col-lg-4 col-sm-6 portfolio-item" style="margin-top: 4%"  *ngFor="let movie of LastMoviesPopulaires">
+       <div class="card h-100" >
+
+        <h4 class="card-header">{{movie.titre_originale}}</h4>
+       
+         <div class="card-body">
+
+          <!--   <a  [routerLink]="['displayFicheMovie', movie.key]"><img class="card-img-top" src="{{movie.poster_path}}" alt=""></a> -->
+
+          <a  [routerLink]="['displayFicheMovie' , {section: 'MoviesFr', key: movie.key} ]"><img class="card-img-top" src="{{movie.poster_path}}" alt=""></a>
+          
+          
+
+           
+           <h4 class="card-title">
+               <a href="#"> {{movie.genre}}</a>
+           </h4>
+
+            <h4 class="card-title">
+               <a href="#">({{movie.annee_release}})</a>
+           </h4>
+
+           
+
+           <a  [routerLink]="['displayFicheMovie' , {section: 'MoviesFr', key: movie.key} ]"> <button type="button" class="btn btn-outline-primary">Lire la fiche</button></a> 
+          
+
+        
+
+
+         </div>
+
+       </div>
+
+     </div> 
+     
+
+
+</div>
+
+<div class="row col-lg-12">         
+
+  <h2 class="my-4">LES DERNIERS FILMS AJOUTES</h2>
+
+  <div class="col-lg-4 col-sm-6 portfolio-item" style="margin-top: 4%"  *ngFor="let movie of LastAjoutMovies">
+       <div class="card h-100" >
+
+        <h4 class="card-header">{{movie.titre_originale}}</h4>
+       
+         <div class="card-body">
+
+          <!--   <a  [routerLink]="['displayFicheMovie', movie.key]"><img class="card-img-top" src="{{movie.poster_path}}" alt=""></a> -->
+
+          <a  [routerLink]="['displayFicheMovie' , {section: 'MoviesFr', key: movie.key} ]"><img class="card-img-top" src="{{movie.poster_path}}" alt=""></a>
+          
+          
+
+           
+           <h4 class="card-title">
+               <a href="#"> {{movie.genre}}</a>
+           </h4>
+
+            <h4 class="card-title">
+               <a href="#">({{movie.annee_release}})</a>
+           </h4>
+
+           
+
+           <a  [routerLink]="['displayFicheMovie' , {section: 'MoviesFr', key: movie.key} ]"> <button type="button" class="btn btn-outline-primary">Lire la fiche</button></a> 
+          
+
+        
+
+
+         </div>
+
+       </div>
+
+     </div> 
+     
+
+
+</div>
+
+
